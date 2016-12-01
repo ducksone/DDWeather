@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D8A6E361DDDD58200CB5EBC /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A6E351DDDD58200CB5EBC /* ShowViewController.swift */; };
 		8C10A2471C1EACF400B22D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10A2461C1EACF400B22D72 /* AppDelegate.swift */; };
 		8C10A2491C1EACF400B22D72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10A2481C1EACF400B22D72 /* ViewController.swift */; };
 		8C10A24C1C1EACF400B22D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10A24A1C1EACF400B22D72 /* Main.storyboard */; };
 		8C10A24E1C1EACF400B22D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C10A24D1C1EACF400B22D72 /* Assets.xcassets */; };
 		8C10A2511C1EACF400B22D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C10A24F1C1EACF400B22D72 /* LaunchScreen.storyboard */; };
+		8C10A2591C1EAF7400B22D72 /* DDLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C10A2581C1EAF7400B22D72 /* DDLocation.swift */; };
+		8C4D0EBE1C201D8500F200C8 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D0EBD1C201D8500F200C8 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D8A6E351DDDD58200CB5EBC /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		8C10A2431C1EACF400B22D72 /* DDWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C10A2461C1EACF400B22D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C10A2481C1EACF400B22D72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		8C10A24D1C1EACF400B22D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C10A2501C1EACF400B22D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C10A2521C1EACF400B22D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C10A2581C1EAF7400B22D72 /* DDLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLocation.swift; sourceTree = "<group>"; };
+		8C4D0EBD1C201D8500F200C8 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				8C10A2461C1EACF400B22D72 /* AppDelegate.swift */,
+				8C10A2581C1EAF7400B22D72 /* DDLocation.swift */,
 				8C10A2481C1EACF400B22D72 /* ViewController.swift */,
+				8C4D0EBD1C201D8500F200C8 /* LocationViewController.swift */,
+				3D8A6E351DDDD58200CB5EBC /* ShowViewController.swift */,
 				8C10A24A1C1EACF400B22D72 /* Main.storyboard */,
 				8C10A24D1C1EACF400B22D72 /* Assets.xcassets */,
 				8C10A24F1C1EACF400B22D72 /* LaunchScreen.storyboard */,
@@ -96,6 +105,8 @@
 				TargetAttributes = {
 					8C10A2421C1EACF400B22D72 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = ZG47RG393B;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -135,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8A6E361DDDD58200CB5EBC /* ShowViewController.swift in Sources */,
+				8C10A2591C1EAF7400B22D72 /* DDLocation.swift in Sources */,
 				8C10A2491C1EACF400B22D72 /* ViewController.swift in Sources */,
 				8C10A2471C1EACF400B22D72 /* AppDelegate.swift in Sources */,
+				8C4D0EBE1C201D8500F200C8 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +261,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Song Deng (36UN53K5JL)";
 				INFOPLIST_FILE = DDWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CQLZ.DDWeather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duck.location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -258,10 +275,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Song Deng (36UN53K5JL)";
 				INFOPLIST_FILE = DDWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CQLZ.DDWeather;
+				PRODUCT_BUNDLE_IDENTIFIER = com.duck.location;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -284,6 +304,7 @@
 				8C10A2571C1EACF400B22D72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

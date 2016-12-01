@@ -1,25 +1,117 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hPP-MR-WaF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="PoX-8z-phd">
+            <objects>
+                <navigationController id="hPP-MR-WaF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="d1l-hg-GGr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mHx-Ce-5UT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMM-7C-2kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303" y="300"/>
+        </scene>
+        <!--Swift Study-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DDWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cmr-1b-ASH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Cmr-1b-ASH" secondAttribute="trailing" id="4TX-8S-mfE"/>
+                            <constraint firstItem="Cmr-1b-ASH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FSq-cv-Dig"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cmr-1b-ASH" secondAttribute="bottom" id="Gpc-rK-bh4"/>
+                            <constraint firstItem="Cmr-1b-ASH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pPu-t0-rIA"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Swift Study" id="NbK-rU-02x"/>
+                    <connections>
+                        <outlet property="functionTableView" destination="Cmr-1b-ASH" id="Nqe-Xb-tm5"/>
+                        <segue destination="VVb-Ch-ZgT" kind="push" identifier="locationSegue" id="IQt-g1-Hgh"/>
+                        <segue destination="umD-v8-rUk" kind="push" identifier="viewSegue" id="D6E-mT-UW6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="400" y="300"/>
+        </scene>
+        <!--初始化视图-->
+        <scene sceneID="ttI-5n-XdD">
+            <objects>
+                <viewController id="umD-v8-rUk" customClass="ShowViewController" customModule="DDWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p1L-77-caF"/>
+                        <viewControllerLayoutGuide type="bottom" id="zQm-pH-Jpm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uvk-Ud-ZRr">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STp-54-B7S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="STp-54-B7S" firstAttribute="leading" secondItem="uvk-Ud-ZRr" secondAttribute="leading" id="71P-pE-omF"/>
+                            <constraint firstItem="zQm-pH-Jpm" firstAttribute="top" secondItem="STp-54-B7S" secondAttribute="bottom" id="Oxo-Zv-2TW"/>
+                            <constraint firstAttribute="trailing" secondItem="STp-54-B7S" secondAttribute="trailing" id="WWP-UC-MFr"/>
+                            <constraint firstItem="STp-54-B7S" firstAttribute="top" secondItem="p1L-77-caF" secondAttribute="bottom" id="nSH-Pj-PfU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="初始化视图" id="MTp-kL-fMe"/>
+                    <connections>
+                        <outlet property="mainScrollView" destination="STp-54-B7S" id="XZa-io-qfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEF-r8-sSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="624"/>
+        </scene>
+        <!--Swift Location-->
+        <scene sceneID="drF-wd-2kj">
+            <objects>
+                <viewController id="VVb-Ch-ZgT" customClass="LocationViewController" customModule="DDWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qJo-2w-zGU"/>
+                        <viewControllerLayoutGuide type="bottom" id="gqb-xk-nS2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NEg-Jb-Xx9">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift Location" id="fok-ez-lsS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0lD-HX-6eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1303" y="-107"/>
         </scene>
     </scenes>
 </document>
